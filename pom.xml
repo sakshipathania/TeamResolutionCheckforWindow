@@ -92,7 +92,7 @@
 				<configuration>
 					<testFailureIgnore> false </testFailureIgnore>
 					<suiteXmlFiles>
-						<suiteXmlFile>TeamResolutionCheck\testng.xml</suiteXmlFile>
+						<suiteXmlFile>\testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
