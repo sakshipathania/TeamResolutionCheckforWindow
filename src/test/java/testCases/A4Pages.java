@@ -20,7 +20,7 @@ public class A4Pages extends BaseClass {
 				{ 1920, 1200 }, { 1440, 900 } };
 	}
 
-	@Test(dataProvider = "windowResolution", enabled = true)
+	@Test(dataProvider = "windowResolution", enabled = false)
 	public void checkResolutionForA4Pages(int w, int h) throws InterruptedException {
 		setDriver(w, h);
 		System.out.println("Resolution = " + w + "*"+ h );
