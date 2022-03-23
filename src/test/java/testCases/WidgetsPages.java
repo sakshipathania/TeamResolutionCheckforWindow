@@ -47,7 +47,7 @@ public class WidgetsPages extends BaseClass {
 			DecimalFormat df = new DecimalFormat("#.##");
 			df.setRoundingMode(RoundingMode.DOWN);
 			System.out.println(df.format(roundedValue));
-			assertTrue(df.format(roundedValue).equals("1.3"), "image is not displayed properly");
+			assertTrue(df.format(roundedValue).equals("1.33"), "image is not displayed properly");
 
 		}
 		driver.close();
