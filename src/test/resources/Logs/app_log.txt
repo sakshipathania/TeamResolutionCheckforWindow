@@ -1,0 +1,2 @@
+INFO    2022-03-23 13:26:32,670 [main] testCases.BaseClass  - Config file loaded !!!
+INFO    2022-03-23 13:26:32,672 [main] testCases.BaseClass  - OR file loaded !!!
