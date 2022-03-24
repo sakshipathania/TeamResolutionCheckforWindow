@@ -148,10 +148,10 @@ public class BaseClass {
 
 					assertTrue(df.format(roundedValue).equals("1.77") || df.format(roundedValue).equals("1.33")
 							|| df.format(roundedValue).equals("0.69") || df.format(roundedValue).equals("1.76")
-							|| df.format(roundedValue).equals("1.25"), "image is not displayed properly");
-					// || df.format(roundedValue).equals("1.32") ||
+							|| df.format(roundedValue).equals("1.25") || df.format(roundedValue).equals("1.75"), "image is not displayed properly");
+					// || df.format(roundedValue).equals("1.32") 
 
-					// ||df.format(roundedValue).equals("1.75")
+					
 
 				}
 				if (!driver.findElements(By.xpath(OR.getProperty("NextButton1"))).isEmpty()) {
