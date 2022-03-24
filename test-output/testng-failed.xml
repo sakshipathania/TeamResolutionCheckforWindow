@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.SliPages">
+      <class name="testCases.A4Pages">
         <methods>
           <include name="setUp"/>
-          <include name="checkResolutionForSliPages" invocation-numbers="0"/>
+          <include name="checkResolutionForA4Pages" invocation-numbers="0"/>
         </methods>
-      </class> <!-- testCases.SliPages -->
+      </class> <!-- testCases.A4Pages -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

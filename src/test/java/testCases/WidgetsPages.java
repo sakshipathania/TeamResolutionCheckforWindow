@@ -24,14 +24,15 @@ public class WidgetsPages extends BaseClass {
 	@DataProvider
 	public Object[][] windowResolution() {
 
-		return new Object[][] { { 2560, 1440 }, { 1920, 1080 }, { 1280, 720 }, { 1536, 864 }, { 1366, 768 },
-				{ 1920, 1200 }, { 1440, 900 } };
+		return new Object[][] { { 2560, 1440 }// , { 1920, 1080 }, { 1280, 720 }, { 1536, 864 }, { 1366, 768 },
+				// { 1920, 1200 }, { 1440, 900 }
+		};
 	}
 
-	@Test(dataProvider = "windowResolution")
+	@Test(dataProvider = "windowResolution" ,enabled = false)
 	public void checkResolutionForWidgets(int w, int h) throws InterruptedException {
 		setDriver(w, h);
-		System.out.println("Resolution = " + w + "*"+ h );
+		System.out.println("Resolution = " + w + "*" + h);
 		driver.get(config.getProperty("testsiteurl"));
 		Thread.sleep(5000);
 		List<WebElement> listofImages = driver.findElements(By.xpath(OR.getProperty("EmarsysImages")));
@@ -41,13 +42,19 @@ public class WidgetsPages extends BaseClass {
 
 			float width = listofImages.get(i).getSize().getWidth();
 			float hight = listofImages.get(i).getSize().getHeight();
-			System.out.println(listofImages.get(i).getAttribute("title") + " -" + width + "-" + hight);
+
 			float roundedValue = width / hight;
-			System.out.println((roundedValue) + "roundedValue");
 			DecimalFormat df = new DecimalFormat("#.##");
 			df.setRoundingMode(RoundingMode.DOWN);
-			System.out.println(df.format(roundedValue));
-			assertTrue(df.format(roundedValue).equals("1.3"), "image is not displayed properly");
+			//System.out.println(df.format(roundedValue));
+			float f = Float.parseFloat(df.format(roundedValue));
+			
+			//System.out.println(f + "float value");
+			if (f <1.33 ||  (f>=1.34) && (f<1.77) || f>=1.78  ) {
+				System.out.println("URL = " + driver.getCurrentUrl() + "\n"+ "PPtName = "+listofImages.get(i).getAttribute("title") + " -" + width + "-" + hight +"\n" +df.format(roundedValue));
+
+			}
+			assertTrue(df.format(roundedValue).equals("1.33"), "image is not displayed properly");
 
 		}
 		driver.close();

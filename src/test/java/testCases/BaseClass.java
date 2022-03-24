@@ -96,11 +96,19 @@ public class BaseClass {
 
 					float width = listofImages.get(i).getSize().getWidth();
 					float hight = listofImages.get(i).getSize().getHeight();
-					System.out.println(listofImages.get(i).getAttribute("title") + " -" + width + "-" + hight);
+					// System.out.println(listofImages.get(i).getAttribute("title") + " -" + width +
+					// "-" + hight);
 					float roundedValue = width / hight;
 					DecimalFormat df = new DecimalFormat("#.##");
 					df.setRoundingMode(RoundingMode.DOWN);
-					System.out.println(df.format(roundedValue));
+					// System.out.println(df.format(roundedValue));
+					float f = Float.parseFloat(df.format(roundedValue));
+					if (f < 1.33 || (f >= 1.34) && (f < 1.77) || f >= 1.78 || f >= 0.70 || f <= 0.68) {
+						System.out.println("URL = " + driver.getCurrentUrl() + "\n" + "PPtName = "
+								+ listofImages.get(i).getAttribute("title") + " -" + width + "-" + hight + "\n"
+								+ df.format(roundedValue));
+
+					}
 					assertTrue(df.format(roundedValue).equals("1.33") || df.format(roundedValue).equals("0.69")
 							|| df.format(roundedValue).equals("1.77"), "image is not displayed properly");
 
@@ -140,18 +148,22 @@ public class BaseClass {
 
 					float width = listofImages.get(i).getSize().getWidth();
 					float hight = listofImages.get(i).getSize().getHeight();
-					System.out.println(listofImages.get(i).getAttribute("title") + " -" + width + "-" + hight);
+					// System.out.println(listofImages.get(i).getAttribute("title") + " -" + width +
+					// "-" + hight);
 					float roundedValue = width / hight;
 					DecimalFormat df = new DecimalFormat("#.##");
 					df.setRoundingMode(RoundingMode.DOWN);
-					System.out.println(df.format(roundedValue));
+					// System.out.println(df.format(roundedValue));
+					float f = Float.parseFloat(df.format(roundedValue));
+					if (f < 1.33 || (f >= 1.34) && (f < 1.77) || f >= 1.78 || f >= 0.70 || f <= 0.68) {
+						System.out.println("URL = " + driver.getCurrentUrl() + "\n" + "PPtName = "
+								+ listofImages.get(i).getAttribute("title") + " -" + width + "-" + hight + "\n"
+								+ df.format(roundedValue));
 
+					}
 					assertTrue(df.format(roundedValue).equals("1.77") || df.format(roundedValue).equals("1.33")
 							|| df.format(roundedValue).equals("0.69") || df.format(roundedValue).equals("1.76")
 							|| df.format(roundedValue).equals("1.25"), "image is not displayed properly");
-					// || df.format(roundedValue).equals("1.32") ||
-
-					// ||df.format(roundedValue).equals("1.75")
 
 				}
 				if (!driver.findElements(By.xpath(OR.getProperty("NextButton1"))).isEmpty()) {
@@ -178,12 +190,21 @@ public class BaseClass {
 
 			float width = listofImages.get(i).getSize().getWidth();
 			float hight = listofImages.get(i).getSize().getHeight();
-			System.out.println(listofImages.get(i).getAttribute("title") + " -" + width + "-" + hight);
+			// System.out.println(listofImages.get(i).getAttribute("title") + " -" + width +
+			// "-" + hight);
 			float roundedValue = width / hight;
 			DecimalFormat df = new DecimalFormat("#.##");
 			df.setRoundingMode(RoundingMode.DOWN);
-			System.out.println(df.format(roundedValue));
+			// System.out.println(df.format(roundedValue));
+			float f = Float.parseFloat(df.format(roundedValue));
 
+			// System.out.println(f + "float value");
+			if (f >= 0.70 || f <= 0.68) {
+				System.out.println("URL = " + driver.getCurrentUrl() + "\n" + "PPtName = "
+						+ listofImages.get(i).getAttribute("title") + " -" + width + "-" + hight + "\n"
+						+ df.format(roundedValue));
+
+			}
 			assertTrue(df.format(roundedValue).equals("0.69"), "image is not displayed properly");
 
 		}

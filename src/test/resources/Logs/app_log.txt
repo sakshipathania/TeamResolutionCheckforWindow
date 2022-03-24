@@ -1,2 +1,4 @@
-INFO    2022-03-23 13:26:32,670 [main] testCases.BaseClass  - Config file loaded !!!
-INFO    2022-03-23 13:26:32,672 [main] testCases.BaseClass  - OR file loaded !!!
+INFO    2022-03-24 12:10:20,986 [main] testCases.BaseClass  - Config file loaded !!!
+INFO    2022-03-24 12:10:20,987 [main] testCases.BaseClass  - OR file loaded !!!
+INFO    2022-03-24 12:10:30,370 [main] testCases.BaseClass  - onePager is successfully clicked
+INFO    2022-03-24 12:10:34,686 [main] testCases.BaseClass  - nextButton is successfully clicked

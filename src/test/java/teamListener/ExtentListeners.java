@@ -21,10 +21,10 @@ import testCases.BaseClass;
 public class ExtentListeners implements ITestListener {
 
 	static Date d = new Date();
-	static String fileName = "Extent_" + d.toString().replace(":", "_").replace(" ", "_") + ".html";
-
+	//static String fileName1 = "Extent_" + d.toString().replace(":", "_").replace(" ", "_") + ".html";
+	static String fileName = "ExtentReport" + ".html";
 	private static ExtentReports extent = ExtentManager
-			.createInstance(System.getProperty("user.dir") + "\\reports\\" + fileName);
+			.createInstance(System.getProperty("user.dir") + "\\target\\reports\\" + fileName);
 
 	public static ThreadLocal<ExtentTest> testReport = new ThreadLocal<ExtentTest>();
 
