@@ -96,7 +96,7 @@ public class BaseClass {
 
 					float width = listofImages.get(i).getSize().getWidth();
 					float hight = listofImages.get(i).getSize().getHeight();
-					System.out.println(listofImages.get(i).getAttribute("title") + " -" + width + "-" + hight);
+					//System.out.println(listofImages.get(i).getAttribute("title") + " -" + width + "-" + hight);
 					float roundedValue = width / hight;
 					DecimalFormat df = new DecimalFormat("#.##");
 					df.setRoundingMode(RoundingMode.DOWN);
@@ -140,7 +140,7 @@ public class BaseClass {
 
 					float width = listofImages.get(i).getSize().getWidth();
 					float hight = listofImages.get(i).getSize().getHeight();
-					System.out.println(listofImages.get(i).getAttribute("title") + " -" + width + "-" + hight);
+					//System.out.println(listofImages.get(i).getAttribute("title") + " -" + width + "-" + hight);
 					float roundedValue = width / hight;
 					DecimalFormat df = new DecimalFormat("#.##");
 					df.setRoundingMode(RoundingMode.DOWN);
@@ -178,11 +178,11 @@ public class BaseClass {
 
 			float width = listofImages.get(i).getSize().getWidth();
 			float hight = listofImages.get(i).getSize().getHeight();
-			System.out.println(listofImages.get(i).getAttribute("title") + " -" + width + "-" + hight);
+			//System.out.println(listofImages.get(i).getAttribute("title") + " -" + width + "-" + hight);
 			float roundedValue = width / hight;
 			DecimalFormat df = new DecimalFormat("#.##");
 			df.setRoundingMode(RoundingMode.DOWN);
-			System.out.println(df.format(roundedValue));
+			//System.out.println(df.format(roundedValue));
 
 			assertTrue(df.format(roundedValue).equals("0.69"), "image is not displayed properly");
 
