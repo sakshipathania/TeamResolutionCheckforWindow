@@ -1,6 +1,10 @@
 package testCases;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.DataProvider;
@@ -12,16 +16,17 @@ public class PopularPPts extends BaseClass {
 
 		return new Object[][] {
 
-				{ 1920, 1080 }, { 1280, 720 }, { 1920, 1200 }, { 1440, 900 }, { 2560, 1440 },
+				{ 1920, 1080 }// , { 1280, 720 }, { 1920, 1200 }, { 1440, 900 }, { 2560, 1440 },
 				// { 1536, 864 },
 				// { 1366, 768 },
 		};
 	}
 
 	@Test(dataProvider = "windowResolution", enabled = true)
-	public void checkResolutionForPopularProducts(int w, int h) throws InterruptedException {
+	public void checkResolutionForpopularPPts(int w, int h) throws InterruptedException {
+
 		setDriver(w, h);
-		System.out.println("Resolution = " + w + "*"+ h );
+		System.out.println("Resolution = " + w + "*" + h);
 		driver.get(config.getProperty("testsiteurl"));
 		Thread.sleep(2000);
 		WebElement popularPPts = wait
@@ -32,5 +37,6 @@ public class PopularPPts extends BaseClass {
 		Thread.sleep(3000);
 		checkResolutionForNewlyAndPopular(driver);
 		driver.close();
+
 	}
 }

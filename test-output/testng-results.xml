@@ -2,65 +2,35 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-24T12:10:20 IST" name="Default suite" finished-at="2022-03-24T12:10:51 IST" duration-ms="30230">
+  <suite started-at="2022-03-24T15:13:14 IST" name="Default suite" finished-at="2022-03-24T15:13:14 IST" duration-ms="21">
     <groups>
     </groups>
-    <test started-at="2022-03-24T12:10:20 IST" name="Default test" finished-at="2022-03-24T12:10:51 IST" duration-ms="30230">
-      <class name="testCases.A4Pages">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.A4Pages@942a29c]" started-at="2022-03-24T12:10:20 IST" name="setUp" finished-at="2022-03-24T12:10:20 IST" duration-ms="60" status="PASS">
+    <test started-at="2022-03-24T15:13:14 IST" name="Default test" finished-at="2022-03-24T15:13:14 IST" duration-ms="21">
+      <class name="testCases.PopularPPts">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.PopularPPts@942a29c]" started-at="2022-03-24T15:13:14 IST" name="setUp" finished-at="2022-03-24T15:13:14 IST" duration-ms="57" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="checkResolutionForA4Pages(int,int)[pri:0, instance:testCases.A4Pages@942a29c]" started-at="2022-03-24T12:10:21 IST" name="checkResolutionForA4Pages" data-provider="windowResolution" finished-at="2022-03-24T12:10:51 IST" duration-ms="30210" status="FAIL">
+        <test-method signature="checkResolutionForpopularPPts(int,int)[pri:0, instance:testCases.PopularPPts@942a29c]" started-at="2022-03-24T15:13:14 IST" name="checkResolutionForpopularPPts" data-provider="windowResolution" finished-at="2022-03-24T15:13:14 IST" duration-ms="3" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[1680]]>
+                <![CDATA[1920]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[1050]]>
+                <![CDATA[1080]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.WebDriverException">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[chrome not reachable
-  (Session info: chrome=99.0.4844.82)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'SLIDEQA2', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\SLIDEQ~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51169}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 52a9ed118f8396409b77230b4a16a863
-*** Element info: {Using=xpath, value=//div[1]/ul[1]/li//div//a//img}]]>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "testCases.PopularPPts.driver" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=99.0.4844.82)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'SLIDEQA2', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\SLIDEQ~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51169}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 52a9ed118f8396409b77230b4a16a863
-*** Element info: {Using=xpath, value=//div[1]/ul[1]/li//div//a//img}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:432)
-at org.openqa.selenium.By$ByXPath.findElements(By.java:348)
-at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:311)
-at testCases.BaseClass.checkResolutionForA4Pages(BaseClass.java:174)
-at testCases.A4Pages.checkResolutionForA4Pages(A4Pages.java:46)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "testCases.PopularPPts.driver" is null
+at testCases.PopularPPts.checkResolutionForpopularPPts(PopularPPts.java:37)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -91,11 +61,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkResolutionForA4Pages -->
-      </class> <!-- testCases.A4Pages -->
+        </test-method> <!-- checkResolutionForpopularPPts -->
+      </class> <!-- testCases.PopularPPts -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

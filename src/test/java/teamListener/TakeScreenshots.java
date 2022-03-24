@@ -23,7 +23,10 @@ public class TakeScreenshots extends BaseClass{
 		Date d = new Date();
 
 		//screenshotName = "error_" + d.toString().replace(":", "_").replace(" ", "_") + ".png";
+
 		screenshotName = "FailedScreenShot"  + ".png";
+
+
 		// System.out.println(System.getProperty("user.dir"));
 
 		FileUtils.copyFile(scrFile, new File(System.getProperty("user.dir") + "\\target\\reports\\" + screenshotName));
