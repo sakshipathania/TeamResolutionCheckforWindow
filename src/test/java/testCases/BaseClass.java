@@ -84,13 +84,13 @@ public class BaseClass {
 		System.out.println(sizeofPagination.size() + " = size");
 
 		if (sizeofPagination.size() > 0) {
-			System.out.println("pagination exists");
+			//System.out.println("pagination exists");
 
 			// click on pagination link
 
 			do {
 				List<WebElement> listofImages = driver.findElements(By.xpath(OR.getProperty("SliImages")));
-				System.out.println("Number of elements:" + listofImages.size());
+				//System.out.println("Number of elements:" + listofImages.size());
 
 				for (int i = 0; i < listofImages.size(); i++) {
 
@@ -143,13 +143,13 @@ public class BaseClass {
 		System.out.println(sizeofPagination.size() + " = size");
 
 		if (sizeofPagination.size() > 0) {
-			System.out.println("pagination exists");
+			//System.out.println("pagination exists");
 
 			// click on pagination link
 
 			do {
 				List<WebElement> listofImages = driver.findElements(By.xpath(OR.getProperty("images1")));
-				System.out.println("Number of elements:" + listofImages.size());
+				//System.out.println("Number of elements:" + listofImages.size());
 
 				for (int i = 0; i < listofImages.size(); i++) {
 
@@ -201,7 +201,7 @@ public class BaseClass {
 	public static void checkResolutionForA4Pages(WebDriver driver) {
 
 		List<WebElement> listofImages = driver.findElements(By.xpath(OR.getProperty("A4images")));
-		System.out.println("Number of elements:" + listofImages.size());
+		//System.out.println("Number of elements:" + listofImages.size());
 
 		for (int i = 0; i < listofImages.size(); i++) {
 
