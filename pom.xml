@@ -92,7 +92,7 @@
                 <configuration>
                     <!-- TestNG Suite XML files list for test execution -->
                     <suiteXmlFiles>
-                        <suiteXmlFile>D:\Selenium Live Projects\TeamResolutionCheck\testng.xml</suiteXmlFile>
+                        <suiteXmlFile>${xmlSuiteFileName}</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
 			</plugin>
