@@ -35,7 +35,7 @@ public class WidgetsPages extends BaseClass {
 		driver.get(config.getProperty("testsiteurl"));
 		Thread.sleep(5000);
 		List<WebElement> listofImages = driver.findElements(By.xpath(OR.getProperty("EmarsysImages")));
-		System.out.println("Number of elements:" + listofImages.size());
+		//System.out.println("Number of elements:" + listofImages.size());
 
 		for (int i = 0; i < listofImages.size(); i++) {
 
@@ -43,7 +43,7 @@ public class WidgetsPages extends BaseClass {
 			float hight = listofImages.get(i).getSize().getHeight();
 			//System.out.println(listofImages.get(i).getAttribute("title") + " -" + width + "-" + hight);
 			float roundedValue = width / hight;
-			System.out.println((roundedValue) + "roundedValue");
+			//System.out.println((roundedValue) + "roundedValue");
 			DecimalFormat df = new DecimalFormat("#.##");
 			df.setRoundingMode(RoundingMode.DOWN);
 			float f = Float.parseFloat(df.format(roundedValue));
