@@ -18,7 +18,7 @@ public class PopularPPts extends BaseClass {
 		};
 	}
 
-	@Test(dataProvider = "windowResolution", enabled = false)
+	@Test(dataProvider = "windowResolution", enabled = true)
 	public void checkResolutionForNewlyProducts(int w, int h) throws InterruptedException {
 		setDriver(w, h);
 		System.out.println("Resolution = " + w + "*"+ h );
