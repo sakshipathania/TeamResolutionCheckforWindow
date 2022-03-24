@@ -93,6 +93,7 @@
                     <!-- TestNG Suite XML files list for test execution -->
                     <suiteXmlFiles>
                         <suiteXmlFile>${xmlSuiteFileName}</suiteXmlFile>
+                        
                     </suiteXmlFiles>
                 </configuration>
 			</plugin>
