@@ -41,12 +41,19 @@ public class WidgetsPages extends BaseClass {
 
 			float width = listofImages.get(i).getSize().getWidth();
 			float hight = listofImages.get(i).getSize().getHeight();
-			System.out.println(listofImages.get(i).getAttribute("title") + " -" + width + "-" + hight);
+			//System.out.println(listofImages.get(i).getAttribute("title") + " -" + width + "-" + hight);
 			float roundedValue = width / hight;
 			System.out.println((roundedValue) + "roundedValue");
 			DecimalFormat df = new DecimalFormat("#.##");
 			df.setRoundingMode(RoundingMode.DOWN);
-			System.out.println(df.format(roundedValue));
+			float f = Float.parseFloat(df.format(roundedValue));
+			if (f >= 1.34 || f <= 1.32) {
+				System.out.println("URL = " + driver.getCurrentUrl() + "\n" + "PPtName = "
+						+ listofImages.get(i).getAttribute("title") + " -" + width + "-" + hight + "\n"
+						+ df.format(roundedValue));
+
+			}
+			//System.out.println(df.format(roundedValue));
 			//assertTrue(df.format(roundedValue).equals("1.33"), "image is not displayed properly");
 
 		}
